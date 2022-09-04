@@ -17,4 +17,11 @@ yarn add -D @storybook/addon-interactions \
 
 Copy the content of `.storybook` from this project to your project
 
+chromatic setup
+
+```
+npm install --save-dev chromatic
+npx chromatic --project-token=<project-token>
+```
+
 
