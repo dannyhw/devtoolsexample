@@ -7,6 +7,8 @@ export default {
   component: ContactForm,
 } as ComponentMeta<typeof ContactForm>;
 
+const typingOptions = { delay: 50 };
+
 export const Basic: StoryObj = {};
 
 const getFormElements = (canvasElement: HTMLElement) => {
@@ -26,10 +28,10 @@ export const FilledInForm: StoryObj = {
     const { button, email, firstName, lastName, phone } =
       getFormElements(canvasElement);
 
-    await userEvent.type(firstName, "John");
-    await userEvent.type(lastName, "Doe");
-    await userEvent.type(email, "asb@asd.com");
-    await userEvent.type(phone, "1234567890");
+    await userEvent.type(firstName, "John", typingOptions);
+    await userEvent.type(lastName, "Doe", typingOptions);
+    await userEvent.type(email, "asb@asd.com", typingOptions);
+    await userEvent.type(phone, "1234567890", typingOptions);
     expect(button).toBeEnabled();
   },
 };
@@ -39,13 +41,13 @@ export const ErrorsInForm: StoryObj = {
     const { button, email, firstName, lastName, phone, canvas } =
       getFormElements(canvasElement);
 
-    await userEvent.type(firstName, " ");
+    await userEvent.type(firstName, " ", typingOptions);
     await userEvent.clear(firstName);
-    await userEvent.type(lastName, " ");
+    await userEvent.type(lastName, " ", typingOptions);
     await userEvent.clear(lastName);
 
-    await userEvent.type(email, "tom", { delay: 50 });
-    await userEvent.type(phone, "123", { delay: 50 });
+    await userEvent.type(email, "tom", typingOptions);
+    await userEvent.type(phone, "123", typingOptions);
 
     expect(button).toBeDisabled();
 
