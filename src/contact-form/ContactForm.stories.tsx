@@ -26,10 +26,10 @@ export const FilledInForm: StoryObj = {
     const { button, email, firstName, lastName, phone } =
       getFormElements(canvasElement);
 
-    userEvent.type(firstName, "John");
-    userEvent.type(lastName, "Doe");
-    userEvent.type(email, "asb@asd.com");
-    userEvent.type(phone, "1234567890");
+    await userEvent.type(firstName, "John");
+    await userEvent.type(lastName, "Doe");
+    await userEvent.type(email, "asb@asd.com");
+    await userEvent.type(phone, "1234567890");
     expect(button).toBeEnabled();
   },
 };
@@ -39,10 +39,10 @@ export const ErrorsInForm: StoryObj = {
     const { button, email, firstName, lastName, phone, canvas } =
       getFormElements(canvasElement);
 
-    userEvent.type(firstName, " ");
-    userEvent.clear(firstName);
-    userEvent.type(lastName, " ");
-    userEvent.clear(lastName);
+    await userEvent.type(firstName, " ");
+    await userEvent.clear(firstName);
+    await userEvent.type(lastName, " ");
+    await userEvent.clear(lastName);
 
     await userEvent.type(email, "tom", { delay: 50 });
     await userEvent.type(phone, "123", { delay: 50 });
