@@ -5,17 +5,29 @@ import { FinalInputProps, Input } from "./Input";
 
 export default {
   component: Input,
-} as ComponentMeta<typeof Input>;
-
-export const Basic: StoryObj<FinalInputProps> = {
   args: {
-    errorMessage: "",
-    type: "text",
     placeholder: "First name",
+    type: "text",
+    errorMessage: "",
   },
   render: function RenderInput(args) {
     const { register } = useForm();
     return <Input {...args} {...register("firstName")} />;
+  },
+} as ComponentMeta<typeof Input>;
+
+export const Basic: StoryObj<FinalInputProps> = {};
+
+export const Filled: StoryObj<FinalInputProps> = {
+  args: {
+    value: "John",
+  },
+};
+
+export const Focused: StoryObj<FinalInputProps> = {
+  args: {
+    value: "John",
+    autoFocus: true,
   },
 };
 
