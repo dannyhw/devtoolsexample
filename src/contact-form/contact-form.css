@@ -1,0 +1,26 @@
+.input {
+  display: block;
+  padding: 8px;
+  width: 400px;
+}
+
+.formRow {
+  display: block;
+  padding-bottom: 28px;
+  /* margin: 0 0 16px 0; */
+  width: 400px;
+}
+
+.error {
+  border: crimson 1px solid;
+}
+.submit {
+  padding: 8px 32px;
+}
+
+.alert {
+  position: absolute;
+  color: crimson;
+  font-weight: bold;
+  font-size: 12px;
+}
