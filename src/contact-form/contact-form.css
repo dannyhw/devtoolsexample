@@ -16,6 +16,8 @@
 }
 .submit {
   padding: 8px 32px;
+  background-color: purple;
+  color: white;
 }
 
 .alert {

@@ -75,11 +75,13 @@ export function ContactForm() {
         })}
       />
 
-      <input
+      <button
         className="submit"
         type="submit"
         disabled={Object.values(errors).some((e) => !!e.message)}
-      />
+      >
+        Submit
+      </button>
     </form>
   );
 }
