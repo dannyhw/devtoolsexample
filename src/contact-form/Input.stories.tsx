@@ -16,11 +16,24 @@ export default {
   },
 } as ComponentMeta<typeof Input>;
 
-export const Basic: StoryObj<FinalInputProps> = {};
+export const Basic: StoryObj<FinalInputProps> = {
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/QlTdSqq6LBwvl5ctqNDYgH/Example-Design?node-id=2%3A19",
+    },
+  },
+};
 
 export const Filled: StoryObj<FinalInputProps> = {
   args: {
     value: "John",
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/QlTdSqq6LBwvl5ctqNDYgH/Example-Design?node-id=2%3A21",
+    },
   },
 };
 
@@ -28,6 +41,12 @@ export const Focused: StoryObj<FinalInputProps> = {
   args: {
     value: "John",
     autoFocus: true,
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/QlTdSqq6LBwvl5ctqNDYgH/Example-Design?node-id=2%3A23",
+    },
   },
 };
 
@@ -40,5 +59,11 @@ export const Erorr: StoryObj<FinalInputProps> = {
   render: function RenderInput(args) {
     const { register } = useForm();
     return <Input {...args} {...register("lastName")} />;
+  },
+  parameters: {
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/QlTdSqq6LBwvl5ctqNDYgH/Example-Design?node-id=6%3A46",
+    },
   },
 };
