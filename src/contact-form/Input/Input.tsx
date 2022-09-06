@@ -1,17 +1,17 @@
-interface InputProps {
+import React from "react";
+import "./input.css";
+
+interface Props {
   errorMessage?: string;
 }
 
-import React from "react";
-import "./contact-form.css";
-
-type FinalInputProps = InputProps &
+export type InputProps = Props &
   React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
   >;
 
-export const Input = React.forwardRef<HTMLInputElement, FinalInputProps>(
+export const Input = React.forwardRef<HTMLInputElement, InputProps>(
   ({ errorMessage, ...props }, ref) => {
     return (
       <div className="formRow">

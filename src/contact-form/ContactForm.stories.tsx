@@ -9,6 +9,8 @@ export default {
 
 export const Basic: StoryObj = {};
 
+const typingOptions = { delay: 300 };
+
 export const FilledInForm: StoryObj = {
   play: async ({ canvasElement }) => {},
 };
