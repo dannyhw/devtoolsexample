@@ -9,9 +9,5 @@ export default {
 export const Basic: StoryObj<ButtonProps> = {
   args: {
     text: "Submit",
-    style: {
-      backgroundColor: "purple",
-      color: "white",
-    },
   },
 };
