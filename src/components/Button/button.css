@@ -1,5 +1,6 @@
 .btn {
-  padding: 8px 32px;
+  padding: 16px 32px;
   background-color: purple;
   color: white;
+  font-size: 16px;
 }

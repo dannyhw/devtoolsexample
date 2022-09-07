@@ -1,7 +1,9 @@
 .input {
   display: block;
-  padding: 8px;
+  padding: 16px 12px;
   width: 400px;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 .formRow {
@@ -11,12 +13,12 @@
 }
 
 .error {
-  border: crimson 1px solid;
+  border: crimson 2px solid;
 }
 
 .alert {
   position: absolute;
   color: crimson;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
 }

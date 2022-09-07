@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
+import "./contact-form.css";
 
 type FormValues = {
   firstName: string;
@@ -78,6 +79,7 @@ export function ContactForm() {
 
       <Button
         type="submit"
+        className="submit"
         disabled={Object.values(errors).some((e) => !!e.message)}
         text="Submit"
       />

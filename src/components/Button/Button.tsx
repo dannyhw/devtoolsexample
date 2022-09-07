@@ -7,9 +7,9 @@ interface Props {
 
 export type ButtonProps = Props & ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button = ({ text, ...props }: ButtonProps) => {
+export const Button = ({ text, className, ...props }: ButtonProps) => {
   return (
-    <button className="btn" {...props}>
+    <button className={`btn ${className}`} {...props}>
       {text}
     </button>
   );
